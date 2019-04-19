@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { x as momo } from "./module";
+//import { default as me } from "./module"
+import Child from "./child";
 
 class App extends Component {
+  state={
+    name:"mohamed",
+    age: 25
+  }
+
+  //function to change the state on click
+  changeStateFunction=()=>{
+    console.log("name-> "+this.state.name);
+    this.setState({
+      name:"haridy"
+    })
+  }
+
+
+  //function to confirm that the Button is clicked
+  clickedFunction = () => {
+    console.log("Just clicked!");
+  }
+
+  // Render the Components
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        HELLO {momo}
+        <Child />
+         <button onClick={this.clickedFunction}> Click Me  </button> 
+         <br></br>
+         <button onClick={this.changeStateFunction}> Change the State  </button>
+
+
       </div>
     );
   }
