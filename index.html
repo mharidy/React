@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Project</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <script type="text/babel">
+        //App Component {Parent of Header, Body and Footer}
+            class App extends React.Component{
+                state={
+                    name:"App Components"
+                }
+               render(){
+                   return(
+                       <div>
+                        <h1> {this.state.name}</h1>
+                        <Header tellHello="Hello" myName="Mohamed"/>
+                        <Body/>
+                        <Footer/>
+                    </div>
+                   )
+               }
+           }
+           //Header Component {Child of App}
+           class Header extends React.Component{
+               state={
+                   name:"Header"
+               }
+               render(){
+                   return(
+                       
+                            <p>{this.state.name} {this.props.tellHello} {this.props.myName} </p>
+
+                       
+                   )
+               }
+           }
+           //Footer Component {Child of App}
+           class Footer extends React.Component{
+               state={
+                   name:"Footer"
+               }
+               render(){
+                   return( 
+                    <p>{this.state.name} Hello From Footer</p>
+                   )
+               }
+           }
+           //Body Component {Child of App}
+           class Body extends React.Component{
+               state={
+                   name:"Body"
+               }
+
+               render(){
+                   return (
+                       
+                       <p>{this.state.name} Hello From Body</p>
+                       
+                   )
+                
+               }
+           }
+               
+               
+               ReactDOM.render(<App />,document.getElementById("app"));
+           </script>
+
+
+</body>
+
+</html>
