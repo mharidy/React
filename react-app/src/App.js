@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { x as momo } from "./module";
+import Item from "./components/Items"
 //import { default as me } from "./module"
 import Child from "./child";
 
@@ -28,10 +29,12 @@ class App extends Component {
     return (
       <div className="App">
         HELLO {momo}
-        <Child />
+        <Child valueFromProps={this.state}/>
          <button onClick={this.clickedFunction}> Click Me  </button> 
          <br></br>
          <button onClick={this.changeStateFunction}> Change the State  </button>
+
+         <Item id="1" name="mohamed" age="24"/>
 
 
       </div>

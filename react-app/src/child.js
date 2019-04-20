@@ -1,14 +1,14 @@
 import React,{Component} from "react";
 
-
-class child extends Component{
-    render(){
+//stateless Component --> arrow function to display the data
+let child=(props)=>{
+    
         return(
             <div>
-                Child Compo
+                {props.valueFromProps.name}
             </div>
         )
-    }
+
 
 }
 export default child;
