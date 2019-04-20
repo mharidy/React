@@ -10,9 +10,11 @@ class Item extends React.Component {
         let singleItems = items.map(item => {
             return (
                 <div>
-                    <p>{item.id}</p>
-                    <p>{item.name}</p>
-                    <p>{item.age}</p>
+                    <div>{item.name}</div>
+                    <div>{item.id}</div>
+                    <div>{item.age}</div>
+                    <div>--------------</div>
+
                 </div>
             )
         })
@@ -20,6 +22,7 @@ class Item extends React.Component {
             <div>
                 <p>Testing Paragraph</p>
                 {singleItems}
+
 
 
             </div>
