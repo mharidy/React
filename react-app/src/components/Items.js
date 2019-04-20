@@ -9,7 +9,8 @@ class Item extends React.Component {
         let { items } = this.props;
         let singleItems = items.map(item => {
             return (
-                <div>
+                //<div key={Math.random()}> in case i don't have id in each object
+                <div key={item.id}>
                     <div>{item.name}</div>
                     <div>{item.id}</div>
                     <div>{item.age}</div>
