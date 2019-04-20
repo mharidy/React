@@ -1,25 +1,35 @@
 import React,{Component} from "react";
 
 
-/*
+
 //Class to display Data
 class Item extends React.Component{
     
     render(){
-        const {name,id,age}=this.props;
+        let {items}=this.props;
+        let singleItems=items.map(item=>{
+            return(
+                <div>
+                <p>{item.id}</p>
+                <p>{item.name}</p>
+                <p>{item.age}</p>
+                </div>
+            )
+        })
+        
         return(
             <div>
                 <p>Testing Paragraph</p>
-                {id}
-                {name}
-                {age}
+                {singleItems}
+                
+
             </div>
         )
     }
     
-}*/
+}
 
-let item=(props)=>{
+/*let item=(props)=>{
     const {name,id,age}=props;
     return(
         <div>
@@ -28,6 +38,6 @@ let item=(props)=>{
                 {age}
         </div>
     )
-}
+}*/
 
-export default item;
+export default Item;

@@ -5,10 +5,15 @@ import Item from "./components/Items"
 import Child from "./child";
 
 class App extends Component {
-  state={
-    name:"mohamed",
-    age: 25
-  }
+  state= {
+    items:[
+       {id:"1",name:"mohamed",age:"22"},
+       {id:"2",name:"nasser",age:"32"},
+       {id:"3",name:"khaled",age:"52"},
+       {id:"4",name:"momo",age:"62"},
+       {id:"5",name:"haridy",age:"72"}
+         ]
+}
 
   //function to change the state on click
   changeStateFunction=()=>{
@@ -34,7 +39,7 @@ class App extends Component {
          <br></br>
          <button onClick={this.changeStateFunction}> Change the State  </button>
 
-         <Item id="1" name="mohamed" age="24"/>
+         <Item items={this.state.items}/>
 
 
       </div>
