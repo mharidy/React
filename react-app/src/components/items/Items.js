@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+//import css file
+import "./Items.css"
 
 
 //Class to display Data
@@ -13,7 +14,7 @@ class Item extends React.Component {
             return item.id > 1 ? (
                 //<div key={Math.random()}> in case i don't have id in each object
 
-                <div key={item.id}>
+                <div className="item" key={item.id}>
                     <div>{item.name}</div>
                     <div>{item.id}</div>
                     <div>{item.age}</div>
