@@ -6,19 +6,31 @@ import Item from "./components/Items"
 
 class App extends Component {
   state = {
-    items: [
-      { id: "1", name: "mohamed", age: "22" },
-      { id: "2", name: "nasser", age: "32" },
-      { id: "3", name: "khaled", age: "52" },
-      { id: "4", name: "momo", age: "62" },
-      { id: "5", name: "haridy", age: "72" }
-    ]
+    name: ""
   }
+
+  //Function to handle text change
+  handelInputChange = (e) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
+
+  //Function to handle Form submit
+  handleSubmitForm = (e) => {
+    e.preventDefault();
+    { console.log(this.state.name) }
+  }
+
   // Render the Components
   render() {
     return (
       <div className="App">
-        <Item items={this.state.items} />
+        <form onSubmit={this.handleSubmitForm}>
+          <input type="text" onChange={this.handelInputChange} />
+          <button> Click Button</button>
+        </form>
+        {this.state.name}
 
 
       </div>
