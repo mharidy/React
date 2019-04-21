@@ -9,7 +9,7 @@ class Nav extends React.Component {
             //<NavLink to> --> like <Link to> but adds a class called "active" to the selected page, we can rename the active class by using activeClassName 
             <div>
                 <ul>
-                <NavLink activeClassName="selectedHome" exact to="/">Home</NavLink>
+                <NavLink activeClassName="selectedHome" exact to="/">Home</NavLink> 
                 <NavLink activeClassName="selectedAbout" to="/about">About</NavLink>
                 </ul>
             </div>
