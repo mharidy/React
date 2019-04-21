@@ -1,0 +1,19 @@
+.ul-container {
+    background: greenyellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ul-container>ul {
+    text-align: center;
+}
+
+.ul-container>ul>a {
+    margin-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.selectedPage {
+    color: blue!important;
+}
